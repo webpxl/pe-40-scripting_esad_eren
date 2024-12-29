@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Goalify</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <script defer src="../js/contact.js"></script>
+</head>
+<body>
+<header class="header">
+    <nav class="nav">
+        <div class="logo-container">
+            <img class="goalify-logo" src="../assets/Goalify logo.png" height="244" width="244"/>
+            <a href="home.html" class="logo">Goalify</a>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="cart.html" class="cart-icon">🛒<span class="cart-count">0</span></a>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+    <h1>Contact Us</h1>
+
+    <div class="contact-wrapper">
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <div class="info-item">
+                <span class="icon">📧</span>
+                <p>support@goalify.com</p>
+            </div>
+            <div class="info-item">
+                <span class="icon">📞</span>
+                <p>+32 XXX XX XX X</p>
+            </div>
+            <div class="info-item">
+                <span class="icon">📍</span>
+                <p>Elfde-Liniestraat 24<br>3500 Hasselt</p>
+            </div>
+        </div>
+    </div>
+</main>
+<script type="module">
+    // cart count bug fix
+    document.addEventListener('DOMContentLoaded', () => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartCount = document.querySelector('.cart-count');
+        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+        cartCount.textContent = totalItems;
+    });
+</script>
+</body>
+</html>

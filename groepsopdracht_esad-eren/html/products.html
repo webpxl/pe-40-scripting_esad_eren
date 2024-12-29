@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - Goalify</title>
+  <link rel="stylesheet" href="../css/products.css">
+  <script type="module" src="../js/products.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <nav class="nav">
+    <div class="logo-container">
+      <img class="goalify-logo" src="../assets/Goalify logo.png" height="244" width="244"/>
+      <a href="home.html" class="logo">Goalify</a>
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" class="cart-icon">🛒<span class="cart-count">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <div id="products-page">
+    <div class="filters">
+      <select id="filterSelect" class="filter-select">
+        <option value="">All Products</option>
+        <option value="name:asc">Name (A-Z)</option>
+        <option value="price:desc">Price (High to Low)</option>
+        <option value="stock:desc">Stock (High to Low)</option>
+      </select>
+    </div>
+    <div class="products-grid" id="products-grid"></div>
+    <div class="pagination" id="pagination"></div>
+  </div>
+  <div id="product-details" class="product-details hidden"></div>
+</div>
+
+
+</body>
+</html>

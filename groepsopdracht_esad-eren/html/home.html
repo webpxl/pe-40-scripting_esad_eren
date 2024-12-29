@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goalify</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <script type="module" src="../js/store.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <nav class="nav">
+    <div class="logo-container">
+      <img class="goalify-logo" src="../assets/Goalify logo.png" height="244" width="244"/>
+      <a href="home.html" class="logo">Goalify</a>
+    </div>
+    <div class="nav-links">
+      <a href="home.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" class="cart-icon">🛒<span class="cart-count">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Premium Soccer Balls for Every Player</h1>
+      <p>Experience the perfect touch, exceptional durability, and professional quality</p>
+      <a href="products.html" class="cta-button">Shop Now</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h2>Professional Quality</h2>
+      <p>Match-ready balls used by professionals worldwide</p>
+    </div>
+    <div class="feature">
+      <h2>Durability Guaranteed</h2>
+      <p>Built to last with premium materials</p>
+    </div>
+    <div class="feature">
+      <h2>Free Shipping</h2>
+      <p>On all orders over $50</p>
+    </div>
+  </section>
+</main>
+<script type="module">
+  // cart count big fix
+  document.addEventListener('DOMContentLoaded', () => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCount = document.querySelector('.cart-count');
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    cartCount.textContent = totalItems;
+  });
+</script>
+</script>
+</body>
+</html>

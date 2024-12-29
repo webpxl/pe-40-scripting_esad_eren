@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart - Goalify</title>
+  <link rel="stylesheet" href="../css/cart.css">
+  <script type="module" src="../js/cart.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <nav class="nav">
+    <div class="logo-container">
+      <img class="goalify-logo" src="../assets/Goalify logo.png" height="244" width="244"/>
+      <a href="home.html" class="logo">Goalify</a>
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" class="active cart-icon">🛒<span class="cart-count">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Shopping Cart</h1>
+
+  <div class="cart-container">
+    <div class="cart-items" id="cart-items">
+      <!-- Cart items will be dynamically inserted here -->
+    </div>
+
+    <div class="cart-summary">
+      <h2>Order Summary</h2>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="subtotal">$0.00</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span id="shipping">$0.00</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <span id="total">$0.00</span>
+      </div>
+      <button class="checkout-button" onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+</main>
+</body>
+</html>
